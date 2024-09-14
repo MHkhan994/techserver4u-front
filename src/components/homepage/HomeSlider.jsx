@@ -12,9 +12,8 @@ const HomeSlider = () => {
 
     const [sliders, setSliders] = useState([])
 
-
     useEffect(() => {
-        axios.get(`https://staging-be-ecom.techserve4u.com/api/settings/getsliders`)
+        axios.get(`${process.env.NEXT_PUBLIC_API_URL}/settings/getsliders`)
             .then(res => {
                 console.log(res.data)
                 setSliders(res.data.sliders)

@@ -21,7 +21,7 @@ const Header = () => {
 
 
     useEffect(() => {
-        axios.get('https://staging-be-ecom.techserve4u.com/api/category/getcategory')
+        axios.get(`${process.env.NEXT_PUBLIC_API_URL}/category/getcategory`)
             .then(res => {
                 if (res.data) {
                     setCategories(res.data.categories)

@@ -1,4 +1,5 @@
 import BasicServices from '@/components/homepage/BasicServices'
+import FeaturedProducts from '@/components/homepage/FeaturedProducts'
 import HomeSlider from '@/components/homepage/HomeSlider'
 import Head from 'next/head'
 
@@ -16,6 +17,7 @@ export default function Home() {
         <HomeSlider />
 
         <BasicServices />
+        <FeaturedProducts />
       </main>
     </>
   )
