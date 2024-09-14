@@ -1,0 +1,51 @@
+.mobile_category_wrapper {
+    position: relative;
+
+    .mobile_category_list {
+        background-color: $white;
+        z-index: 99;
+        width: 300px;
+        padding: 20px;
+        max-height: calc(100vh - 143px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        box-shadow: 1px 3px 32px -11px rgba(0, 0, 0, 0.58);
+        -webkit-box-shadow: 1px 3px 32px -11px rgba(0, 0, 0, 0.58);
+        -moz-box-shadow: 1px 3px 32px -11px rgba(0, 0, 0, 0.58);
+
+        position: absolute;
+        top: 50px;
+
+        @media screen and (max-width: 540px) {
+            width: 100vw;
+            left: -10px;
+            top: 42px;
+
+            height: calc(100vh - 80px);
+        }
+
+        ul {
+            border-inline-end: none !important;
+        }
+
+        a {
+            font-size: 16px;
+            text-decoration: none;
+            color: $text_black;
+        }
+
+        .ant-menu-submenu-active {
+            background-color: $primary_light;
+
+            .ant-menu-title-content {
+                a {
+                    // color: $primary_color !important;
+                }
+            }
+
+            .ant-menu-submenu-title {
+                background-color: transparent !important;
+            }
+        }
+    }
+}

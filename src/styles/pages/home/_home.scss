@@ -1,0 +1,19 @@
+.home_slider {
+    width: 100%;
+
+    .mySwiper {
+        width: 100%;
+
+        .slider_img {
+            object-fit: cover;
+            height: 550px;
+            width: 100%;
+
+            @media screen and (max-width: 1440px) {
+                height: auto;
+                object-fit: contain;
+            }
+        }
+    }
+
+}

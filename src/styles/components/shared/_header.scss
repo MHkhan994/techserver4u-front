@@ -1,0 +1,170 @@
+.main_header {
+    background-color: $bg_dark;
+    color: $white;
+
+    .search_wrapper {
+        display: flex;
+        position: relative;
+
+        .input_wrapper {
+            width: 360px;
+            background-color: $bg_light_dark;
+            padding: 10px 14px;
+            outline: none;
+            border: 1px solid $border_dark;
+            color: $white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+
+            @media screen and (max-width: 740px) {
+                width: 300px;
+            }
+
+            @media screen and (max-width: 540px) {
+                width: 250px;
+                padding: 8px 10px;
+            }
+
+            @media screen and (max-width: 460px) {
+                width: 220px;
+            }
+
+            @media screen and (max-width: 420px) {
+                font-size: 14px;
+            }
+
+            input {
+                width: 100%;
+                background-color: transparent;
+                outline: none;
+                border: none;
+                color: $white;
+            }
+        }
+
+
+    }
+
+    .navbar-top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+
+        .navbar_logo {
+            flex-grow: 1;
+
+            img {
+                height: 40px;
+                width: 132px;
+            }
+        }
+
+        .nav_button {
+            background-color: transparent;
+            color: $white;
+            border: none;
+        }
+    }
+
+    .navbar-bottom {
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .category_btn {
+            font-size: 16px;
+            border-radius: 8px;
+            padding: 8px 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            @media screen and (max-width: 540px) {
+                span {
+                    display: none;
+                }
+            }
+
+            padding: 10px 16px;
+        }
+
+
+        .cat_menu_hover {
+            background-color: $primary_color;
+            padding: 10px 14px;
+            border-radius: 10px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+
+            span {
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            @media screen and (max-width: 740px) {
+                width: fit-content;
+            }
+
+            @media screen and (max-width: 540px) {
+                padding: 8px 10px;
+                gap: 10px;
+            }
+
+            @media screen and (max-width: 420px) {
+                padding: 12px 20px;
+                gap: 10px;
+                font-size: 12px;
+
+                span {
+                    display: none;
+                }
+            }
+        }
+
+        .pages_list {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+
+            @media screen and (max-width: 640px) {
+                gap: 20px;
+            }
+
+            @media screen and (max-width: 740px) {
+                display: none;
+            }
+
+            @media screen and (max-width: 540px) {
+                a {
+                    font-size: 14px !important;
+                }
+            }
+
+            li {
+                list-style-type: none;
+
+                a {
+                    color: $Off_white;
+                    font-family: "Be Vietnam Pro", sans-serif;
+                    font-size: 16px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.nav_menu_dropdown_button {
+    @media screen and (min-width: 740px) {
+        display: none;
+    }
+
+}
