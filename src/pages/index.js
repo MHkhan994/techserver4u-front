@@ -2,6 +2,7 @@ import BasicServices from '@/components/homepage/BasicServices'
 import FeaturedProducts from '@/components/homepage/FeaturedProducts'
 import HomeSlider from '@/components/homepage/HomeSlider'
 import LatestProducts from '@/components/homepage/LatestProducts'
+import ProductByCategory from '@/components/homepage/ProductByCategory'
 import ShopByCategory from '@/components/homepage/ShopByCategory'
 import Head from 'next/head'
 
@@ -24,6 +25,8 @@ export default function Home() {
         <LatestProducts />
 
         <ShopByCategory />
+
+        <ProductByCategory />
       </main>
     </>
   )
