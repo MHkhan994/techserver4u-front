@@ -1,0 +1,122 @@
+.basic-services {
+
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    @media screen and (max-width: 1080px) {
+        gap: 20px;
+    }
+
+    @media screen and (max-width: 560px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .info_item {
+        border-radius: 12px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+
+        @media screen and (max-width: 1080px) {
+            gap: 20px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 860px) {
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 740px) {
+            gap: 10px;
+        }
+
+        .icon {
+            height: 96px;
+            width: 96px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 12px solid;
+        }
+
+
+        &:first-child {
+            background-color: #FFF5D9;
+
+            .icon {
+                background-color: #FBBC05;
+                border-color: #ffffffbe;
+                ;
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: #FDE6E4;
+
+            .icon {
+                background-color: #F4847A;
+                border-color: #ffffffbe;
+                ;
+            }
+        }
+
+        &:last-child {
+            background-color: #F5EBFC;
+
+            .icon {
+                background-color: #D4A0F9;
+                border-color: #ffffffbe;
+                ;
+            }
+        }
+
+        .text {
+            p {
+                font-size: 20px;
+                font-weight: 500;
+                color: $text_gray;
+
+                @media screen and (max-width: 1080px) {
+                    font-size: 16px;
+                }
+
+                @media screen and (max-width: 740px) {
+                    font-size: 14px;
+                }
+
+                @media screen and (max-width: 540px) {
+                    font-size: 14px;
+                }
+            }
+
+            h2 {
+                font-size: 30px;
+                font-weight: 700;
+                color: $text_black;
+                padding-top: 10px;
+
+                @media screen and (max-width: 1360px) {
+                    font-size: 24px;
+                }
+
+                @media screen and (max-width: 1080px) {
+                    font-size: 20px;
+                }
+
+                @media screen and (max-width: 740px) {
+                    font-size: 18px;
+                }
+
+                @media screen and (max-width: 540px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

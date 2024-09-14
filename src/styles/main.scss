@@ -3,6 +3,11 @@
 @import './components/shared/header';
 @import './common';
 
+// components
 @import './components/shared/categoryList';
 @import './components/shared/categoryListMobile';
+@import './components/home/basicServices';
+
+
+// pages
 @import './pages/home/home';
