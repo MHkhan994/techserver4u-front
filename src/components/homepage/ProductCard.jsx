@@ -5,12 +5,11 @@ import React from 'react'
 
 const ProductCard = ({ product }) => {
 
-    console.log(product)
 
     return (
         <div className='product_card'>
             <Link
-                href={'./'}
+                href={`/product/${product._id}`}
                 className='product_image'
             >
                 <div>

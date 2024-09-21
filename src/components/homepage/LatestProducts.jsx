@@ -71,7 +71,7 @@ const LatestProducts = () => {
 
                                     <div className='bottom'>
                                         <Image src={'/svgs/home/downArrow.png'} height={28} width={23} className='arrow' alt='arrow down icon' />
-                                        <Link className='action' href={`/`}>shop now</Link>
+                                        <Link className='action' href={`/product/${product._id}`}>shop now</Link>
                                     </div>
                                 </div>
                             </div>)
