@@ -9,6 +9,7 @@ import { Dropdown } from 'antd';
 import axios from 'axios';
 import { useMediaQuery } from 'react-responsive';
 import CategoryListMobile from './CategoryListMobile';
+import CartDrawer from './CartDrawer';
 
 
 const Header = () => {
@@ -65,9 +66,7 @@ const Header = () => {
                     {
                         !isMobile && <Search />
                     }
-                    <button className='nav_button'>
-                        <HiOutlineShoppingCart size={24} />
-                    </button>
+                    <CartDrawer />
                     <button className='nav_button'>
                         <HiOutlineUserCircle size={25} />
                     </button>
