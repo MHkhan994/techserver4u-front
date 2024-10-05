@@ -9,6 +9,8 @@ import { LuMinus } from "react-icons/lu";
 import { FiPlus } from "react-icons/fi";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { LiaCubeSolid } from "react-icons/lia";
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart } from '@/redux/reducers/cartSlice';
 
 
 const ProductTop = ({ product }) => {
@@ -22,13 +24,18 @@ const ProductTop = ({ product }) => {
     const [stock, setStock] = useState(0)
     const [quantity, setQuantity] = useState(1)
 
+    const cart = useSelector(state => state.cart)
+
+    console.log(cart)
+
+    const dispatch = useDispatch()
+
     const [isClient, setIsClient] = useState(false)
 
     useEffect(() => {
         setIsClient(true)
     }, [])
 
-    console.log(product)
 
 
     useEffect(() => {
@@ -147,11 +154,13 @@ const ProductTop = ({ product }) => {
             item.tax = product.tax.value
         }
         else {
-            item.tax = Math.floor((prod.price * (prod.tax.value / 100)))
+            item.tax = Math.floor((product.price * (product.tax.value / 100)))
         }
 
-        console.log(item)
+        dispatch(addToCart(item))
     }
+
+
 
 
     if (!isClient) {
@@ -160,6 +169,7 @@ const ProductTop = ({ product }) => {
 
     return (
         <div className='single_product_top'>
+
             <div className='main_container product_main'>
                 <div className='image_gallery'>
                     <div className='small_images'>
