@@ -9,6 +9,11 @@
 }
 
 
+button {
+    border: none;
+}
+
+
 h1,
 h2,
 h3,
@@ -22,4 +27,89 @@ span,
 i {
     font-family: "Be Vietnam Pro", sans-serif !important;
     margin: 0;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+.primary_btn {
+    border: none;
+    outline: none;
+    background: $primary_color;
+    color: white;
+    padding: 7px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+
+    &:hover {
+        background: $primary_hover_color;
+        color: white;
+    }
+
+    &:disabled,
+    &[disabled] {
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+        cursor: not-allowed;
+    }
+
+    @media (max-width: 680px) {
+        padding: 3px 10px;
+        font-size: 15px;
+    }
+}
+
+.secondary_btn {
+    border: none;
+    outline: none;
+    background: $dark_orange;
+    color: white;
+    padding: 7px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+
+    &:hover {
+        background: $dark_orange;
+        color: white;
+    }
+
+    &:disabled,
+    &[disabled] {
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+        cursor: not-allowed;
+    }
+
+    @media (max-width: 680px) {
+        padding: 3px 10px;
+        font-size: 15px;
+    }
+}
+
+.primary_outline_btn {
+    border: 1px solid $primary_color;
+    outline: none;
+    background: $white;
+    color: $primary_color;
+    padding: 7px 20px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 0.3s;
+
+    &:hover {
+        background: $primary_color;
+        color: white;
+    }
+
+    @media (max-width: 680px) {
+        padding: 3px 10px;
+        font-size: 15px;
+    }
 }
