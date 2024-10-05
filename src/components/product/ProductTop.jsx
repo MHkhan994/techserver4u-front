@@ -28,6 +28,8 @@ const ProductTop = ({ product }) => {
         setIsClient(true)
     }, [])
 
+    console.log(product)
+
 
     useEffect(() => {
         if (attributes.length > 0 && product) {
@@ -116,6 +118,39 @@ const ProductTop = ({ product }) => {
             return
         }
         setQuantity(prev => prev + 1)
+    }
+
+
+    const handleAddToCart = () => {
+        const item = {
+            price,
+            thumbnail: product.thumbnail,
+            name: product.name,
+            attributes,
+            slug: product.slug,
+            productId: product._id,
+            shipping: product.shipping,
+            isAvailable: true,
+            quantity,
+        }
+
+        if (discount > 0) {
+            if (discountType === 'flat') {
+                item.price = price - discount
+            }
+            else {
+                item.price = price - Math.floor((price * (discount / 100)))
+            }
+        }
+
+        if (product.tax.taxType === 'flat') {
+            item.tax = product.tax.value
+        }
+        else {
+            item.tax = Math.floor((prod.price * (prod.tax.value / 100)))
+        }
+
+        console.log(item)
     }
 
 
@@ -223,7 +258,7 @@ const ProductTop = ({ product }) => {
                         </div>
                     </div>
                     <div className='action-buttons'>
-                        <button className='primary_btn'><RiShoppingCartLine size={20} /> Add to Cart</button>
+                        <button className='primary_btn' onClick={handleAddToCart}><RiShoppingCartLine size={20} /> Add to Cart</button>
                         <button className='secondary_btn'> <LiaCubeSolid size={22} /> Buy Now</button>
                     </div>
                 </div>
