@@ -70,7 +70,7 @@ const SignupFrom = ({ onFinish }) => {
 
                 <button type='button' className='primary_btn google_btn'>Continue with Google</button>
 
-                <h5 className='text-center'>Already have an account? <Link href={'/login'}>Login</Link></h5>
+                <h5 className='text-center'>Already have an account? <Link href={'/signin'}>Login</Link></h5>
             </Form>
 
         </div>
