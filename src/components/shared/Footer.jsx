@@ -8,26 +8,26 @@ const Footer = () => {
         <div id='footer'>
             <div className='main_container'>
                 <div className='footer-container'>
-                    <div className='d-flex flex-column justify-content-start gap-4'>
+                    <div className='flex flex-col justify-content-start gap-4'>
                         <Image className='logo' src={'/logo.png'} height={40} width={100} alt='footer-logo' />
                         <p className='text'>techserve4u@gmail.com</p>
                         <p className='text'>+123-589-9763</p>
                         <p className='text'>King Street, Melbourne,Australia</p>
                     </div>
-                    <div className='d-flex flex-column justify-content-start gap-4'>
+                    <div className='flex flex-col gap-4'>
                         <h3 className='section_title text-start'>Categories</h3>
                         <p className='text'>About Us</p>
                         <p className='text'>Shop</p>
                         <p className='text'>Contact Us</p>
                         <p className='text'>Resources</p>
                     </div>
-                    <div className='d-flex flex-column justify-content-start gap-4'>
+                    <div className='flex flex-col justify-content-start gap-4'>
                         <h3 className='section_title text-start'>My Account</h3>
                         <p className='text'>Support</p>
                         <p className='text'>Your Quotes</p>
                         <p className='text'>Track your Order</p>
                     </div>
-                    <div className='d-flex flex-column justify-content-start gap-4'>
+                    <div className='flex flex-col justify-content-start gap-4'>
                         <h3 className='section_title text-start'>Follow Us</h3>
                         <p className='text'>It is a long established fact that a reader will be distracted by the readable
                             looking at its layout.</p>
