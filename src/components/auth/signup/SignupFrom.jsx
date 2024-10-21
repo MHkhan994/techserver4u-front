@@ -1,14 +1,13 @@
-import { Form, Input } from 'antd'
+import { Divider, Form, Input } from 'antd'
 import React from 'react'
 import { FaRegUserCircle } from 'react-icons/fa';
 import { TbMail } from "react-icons/tb";
 import { MdLockOpen } from "react-icons/md";
+import Link from 'next/link';
 
-const SignupFrom = () => {
+const SignupFrom = ({ onFinish }) => {
 
-    const onFinish = (values) => {
-        console.log('Success:', values);
-    };
+
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
     };
@@ -65,6 +64,13 @@ const SignupFrom = () => {
                 >
                     <Input prefix={<MdLockOpen size={20} />} type='password' placeholder='Enter password' className='default_input'></Input>
                 </Form.Item>
+
+                <button className='primary_btn'>Register</button>
+                <Divider plain>Or Register With</Divider>
+
+                <button type='button' className='primary_btn google_btn'>Continue with Google</button>
+
+                <h5 className='text-center'>Already have an account? <Link href={'/login'}>Login</Link></h5>
             </Form>
 
         </div>
