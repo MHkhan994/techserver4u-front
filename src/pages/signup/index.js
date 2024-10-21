@@ -3,6 +3,7 @@ import { toast } from 'sonner'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
+import VarifyEmailForm from '@/components/auth/signup/VarifyEmailForm'
 
 const SignUp = () => {
 
@@ -13,6 +14,9 @@ const SignUp = () => {
     useEffect(() => {
         if (router.query.tab) {
             setTab(router.query.tab)
+        }
+        else {
+            setTab('register')
         }
     }, [router])
 
@@ -28,7 +32,7 @@ const SignUp = () => {
             .then(res => {
                 console.log(res.data)
                 if (res.data.isOtpSend) {
-                    router.push('/signup?tab=varify')
+                    router.push(`/signup?tab=varify&email=${values.email}`)
                     toast.success('User registered successfully')
                 }
             })
@@ -40,7 +44,7 @@ const SignUp = () => {
     return (
         <div className='auth-container'>
             {
-                tab === 'register' ? <SignupFrom onFinish={onFinish} /> : <div></div>
+                tab === 'register' ? <SignupFrom onFinish={onFinish} /> : <VarifyEmailForm />
             }
         </div>
     )
