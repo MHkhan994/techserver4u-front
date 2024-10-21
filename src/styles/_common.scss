@@ -81,3 +81,17 @@
         font-size: 15px;
     }
 }
+
+
+//  form styling
+
+.default_input {
+    height: 40px;
+    background-color: $primary_light;
+    border: 1px solid $border_light_blue;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 100%;
+    color: $text_gray;
+}
